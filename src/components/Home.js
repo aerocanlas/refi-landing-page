@@ -25,7 +25,7 @@ export default function Home() {
   <div className="hero-overlay bg-opacity-60"></div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-bold">Give Now</h1>
+      <h1 className="mb-5 text-5xl font-medium tracking-widest">Give Now</h1>
       <p className="mb-5">CHAMPIONING THOMASIAN EXCELLENCE AND INNOVATION. EMPOWER A THOMASIAN ADVOCACY.</p>
       <button className="btn btn-primary text-lg font-semibold">Explore</button>
     </div>
@@ -43,6 +43,39 @@ export default function Home() {
     </div>
   </div>
 </div>
+
+<div class="bg-gradient-to-blue from-blue-50 to-gray-50 flex items-center justify-center lg:h-[800px]">
+      <div class="container mx-auto my-auto p-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 gap-20">
+         
+          <div class="bg-white rounded-lg border p-4 sm:lg:h-[750px] lg:h-[550px]">
+            <img src="/news 1.png" alt="Groundbreaking Ceremonies" class="w-full h-72 rounded-md object-cover" />
+            <div class="px-1 py-4">
+              <div class="font-bold text-2xl mb-10">Groundbreaking Ceremonies</div>
+              <p class="text-gray-700 text-base">
+              Diorama of the Dr. Tony Tan Caktiong Innovation Center currently being built at the Sta. Rosa, Laguna campus of the University of Santo Tomas.
+              </p>
+            </div>
+            <div class="px-1 py-4">
+              <a href="#" class="text-blue-500 hover:underline"><br/>Read More</a>
+            </div>
+          </div>
+          <div class="bg-white rounded-lg border p-4 sm:lg:h-[750px] lg:h-[550px]">
+            <img src="/news 2.png" alt="Lecture" class="w-full h-72 rounded-md object-cover" />
+            <div class="px-1 py-4">
+              <div class="font-bold text-2xl mb-10">Professional Lecture</div>
+              <p class="text-gray-700 text-base">
+              The conference, held in commemoration of the 475th Death Anniversary of Saint Thomas Aquinas, was the first conference organized bythe Faculty of Philosophy Students Forum (FPSF) on the topic.            
+              </p>
+              </div>
+            <div class="px-1 py-4">
+              <a href="#" class="text-blue-500 hover:underline">Read More</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
     <Footer/>
     </>
   )

@@ -1,7 +1,8 @@
 .tab {
-    margin: 20px auto;
     max-width: 1000px;
-    width: 95%;
+    width: 100%;
+    display: flex;
+  justify-content: center;
 }
 
 .tab .tab-headers {
@@ -46,18 +47,35 @@
 
 
 .tab .tab-body {
-    padding: 30px 20px;
-    text-align: left;
+    padding: 30px 40px;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    @media screen and (max-width: 640px) {
+        display: block;
+        left: 0px;
+     }
 }
 
 .tab .tab-body > h2 {
+    margin-top: 30px;
     color: #222;
     margin-bottom: 15px;
-    font-size: 18px;
+    font-size: 23px;
+    text-align: left;
+    font-weight: bold;
+    @media screen and (max-width: 640px) {
+        margin-top: 150px;
+        
+    }
 }
 
 .tab .tab-body > p {
     color: #555;
+    margin-top: 40px;
     margin-bottom: 10px;
+    text-align: left;
+    font-size: 23px;
+    text-align: justify;
     
 }

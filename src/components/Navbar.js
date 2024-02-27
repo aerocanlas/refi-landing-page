@@ -113,7 +113,7 @@ const Navbar = () => {
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
       <li><NavLink to='/Home'>Home</NavLink></li>
         <li>
-          <a>About</a>
+        <NavLink to='/About'>About</NavLink>
           <ul className="p-2">
             <li><a>Directory of Grants</a></li>
             <li><a>Professional Chair</a></li>

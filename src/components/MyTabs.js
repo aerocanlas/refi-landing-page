@@ -1,40 +1,75 @@
+import * as React from 'react';
+import PropTypes from 'prop-types';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import '../layout/flip.scss'
-import { useEffect, useState  } from "react";
-import '../layout/tabs.css'
-import '../layout/scramble.css'
-import MyTabs from './MyTabs'
-import React
- from "react";
+function CustomTabPanel(props) {
+  const { children, value, index, ...other } = props;
 
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
 
+CustomTabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
 
-  const History = () => {
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
 
-    return (
+export default function BasicTabs() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+<Box sx={{ width: '100%', ml: '10%', mr: '10%', mt: '2%'}}>
+      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+          <Tab label="History" {...a11yProps(0)} sx={{fontWeight: 'bold', fontSize: '21px'}}/>
+          <Tab label="Mission & Vision" {...a11yProps(1)} sx={{fontWeight: 'bold', fontSize: '21px'}}/>
+          <Tab label="The Board of Directors" {...a11yProps(2)} sx={{fontWeight: 'bold', fontSize: '21px'}}/>
+          <Tab label="Beneficiaries" {...a11yProps(3)} sx={{fontWeight: 'bold', fontSize: '21px'}}/>
+        </Tabs>
+      </Box>
+      <CustomTabPanel value={value} index={0}>
       <>
-      <h2>History</h2>
 
-      <p>The UST Research and Endowment Foundation, Inc. was established in 1991 to facilitate and manage the donations for the scholarship of both students and faculty of the University of Santo Tomas. Since then, it has received support from Thomasian alumni and industry partners. Over the years, maintaining its good standing with the Securities and Exchange Commission, the Bureau of Internal Revenue, and the Department of Social Welfare and Development has helped the Foundation in its efforts to aid students, faculty, and support staff of UST.
+      <dd className="my-10 text-xl text-gray-500 text-justify">The UST Research and Endowment Foundation, Inc. was established in 1991 to facilitate and manage the donations for the scholarship of both students and faculty of the University of Santo Tomas. Since then, it has received support from Thomasian alumni and industry partners. Over the years, maintaining its good standing with the Securities and Exchange Commission, the Bureau of Internal Revenue, and the Department of Social Welfare and Development has helped the Foundation in its efforts to aid students, faculty, and support staff of UST.
 
  
 
 <br/>
-<br/>In 2017, the Foundation received its certification from the Philippine Council for NGO Certification, as well as the Donee Institution Status from the Bureau of Internal Revenue.</p>
+<br/>In 2017, the Foundation received its certification from the Philippine Council for NGO Certification, as well as the Donee Institution Status from the Bureau of Internal Revenue.</dd>
       </>
-    )
-  }
-
-  const VisionMission = () => {
-
-    return (
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={1}>
       <>
-<h2 className="font-bold text-[23px] text-left">Vision & Mission</h2>
 
-<div className="mt-10">
-        <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-1 md:gap-x-8 md:gap-y-10">
+        <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-1 md:gap-x-8 md:gap-y-10 my-10">
             <div className="relative">
                 <dt>
                     <div
@@ -82,44 +117,23 @@ import React
 
            
         </dl>
-    </div>
-
 
       </>
-    )
-  }
-
-  const TheBoardOfDirectors = () => {
-
-    const [isSm, setIsSm] = useState(false);
-  
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 640px)');
-    const handleChange = () => setIsSm(mediaQuery.matches);
-
-    mediaQuery.addListener(handleChange);
-    handleChange();
-
-    return () => mediaQuery.removeListener(handleChange);
-  }, []);
-
-    return (
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={2}>
       <>
-      <h2>The Board of Directors</h2>
-<div class="container my-24 mx-auto md:px-6">
-  <section class="mb-32 text-center">
 
-    <div class="lg:gap-xl-12 grid gap-x-6 md:grid-cols-1 xl:grid-cols-4">
+    <div class="my-10 lg:gap-xl-12 grid gap-x-6 md:grid-cols-1 xl:grid-cols-4">
       <div class="mb-12">
         <img src="./images/president.jpg"
-          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt=""  />
+          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
         <p class="mb-2 font-bold">VERY. REV. FR. RICHARD G. ANG, OP</p>
         <p class="text-neutral-500 dark:text-neutral-300">President and Chairman of the Board</p>
       </div>
 
       <div class="mb-12">
         <img src="./images/vp.jpg"
-          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt=""  />
+          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
 
         <p class="mb-2 font-bold">REV. FR. ISAIAS D. TIONGCO, OP</p>
         <p class="text-neutral-500 dark:text-neutral-300">Vice President</p>
@@ -127,7 +141,7 @@ import React
 
       <div class="mb-12">
         <img src="./images/treasurer.jpg"
-          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt=""  />
+          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
         <p class="mb-2 font-bold">REV. FR. ROBERTO L. LUANZON, JR., OP</p>
         <p class="text-neutral-500 dark:text-neutral-300">
         Treasurer
@@ -135,14 +149,14 @@ import React
       </div>
       <div class="mb-12">
         <img src="./images/corporate secretary.jpg"
-          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt=""  />
+          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
         <p class="mb-2 font-bold">REV. FR. LOUIE R. CORONEL, OP</p>
         <p class="text-neutral-500 dark:text-neutral-300">Corporate Secretary</p>
       </div>
 
       <div class="mb-12">
         <img src="./images/director.jpg"
-          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt=""  />
+          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
         <p class="mb-2 font-bold">REV. FR. MAXIMO P. GATELA, OP</p>
         <p class="text-neutral-500 dark:text-neutral-300">
           Director
@@ -151,28 +165,28 @@ import React
 
       <div class="mb-12">
         <img src="./images/member 1.jpg"
-          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt=""  />
+          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
         <p class="mb-2 font-bold">REV. FR. RODEL E. ALIGAN, OP</p>
         <p class="text-neutral-500 dark:text-neutral-300">Member</p>
       </div>
 
       <div class="mb-12">
         <img src="./images/member 2.jpg"
-          class={`mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20`} alt=""  />
+          class={`mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20`} width={200} alt=""  />
         <p class="mb-2 font-bold">REV. FR. RODEL S. CANSANCIO, OP</p>
         <p class="text-neutral-500 dark:text-neutral-300">Member</p>
       </div>
 
       <div class="mb-12">
         <img src="./images/member 3.jpg"
-          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt=""  />
+          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
         <p class="mb-2 font-bold">PROF. CHERYL R. PERALTA</p>
         <p class="text-neutral-500 dark:text-neutral-300">Member</p>
       </div>
 
       <div class="mb-12">
         <img src="./images/member 4.jpg"
-          class={`mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20 ${isSm ? 'w-52' : 'w-40'}`} alt=""  />
+          class={`mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20`} width={200} alt=""  />
         <p class="mb-2 font-bold">PROF. MARIBEL G. NONATO</p>
         <p class="text-neutral-500 dark:text-neutral-300">
         Member
@@ -181,7 +195,7 @@ import React
 
       <div class="mb-12">
         <img src="./images/member 5.jpg"
-          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" alt=""  />
+          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
         <p class="mb-2 font-bold">MRS. CLOTILDE N. ARCANGEL</p>
         <p class="text-neutral-500 dark:text-neutral-300">
         Member
@@ -189,115 +203,26 @@ import React
       </div>
 
     </div>
-  </section>
-</div>
+
       </>
-    )
-  }
-
-  const OurBeneficiaries = () => {
-
-    return (
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={3}>
       <>
-      <h2>Our Beneficiaries</h2>
 
-      <p>Lorem ipsum</p>
+      <dd className="mt-2 ml-0 text-xl text-gray-500 text-justify">
+      The beneficiaries and/or clients of the programs of the UST Research and Endowment Foundation, Inc. may include but not limited to the following:
+                </dd>
+      <ul>
+        <li>The Faculty Members of the University of Santo Tomas</li>
+        <li>Researchers of UST</li>
+        <li>Support Staff of UST</li>
+        <li>UST Faculties and Colleges</li>
+        <li>Poor but Deserving UST Students</li>
+        <li>Impoverished Partner/Adopted Communities of UST</li>
+      </ul>
+
       </>
-    )
-  }
-
-  const Tabs = ({config}) => {
-    const [activeTab, setActiveTab] = React.useState(0)
-    const [isSm, setIsSm] = useState(false);
-  
-    useEffect(() => {
-      const mediaQuery = window.matchMedia('(max-width: 640px)');
-      const handleChange = () => setIsSm(mediaQuery.matches);
-  
-      mediaQuery.addListener(handleChange);
-      handleChange();
-  
-      return () => mediaQuery.removeListener(handleChange);
-    }, []);
-
-    return (
-      
-      <div className={`tab`}>
-        <div className={`tab-headers ${isSm ? 'mb-20' : 'mt-0'}`}>
-          {
-
-            config.map((entry, index) => (
-              <div
-                className={`tab-header ${activeTab === index ? "active" : ""}`}
-                onClick={() => setActiveTab(index)}
-              >
-                {entry.header}
-              </div>
-
-            ))
-          }
-        </div>
-
-        <div className={`tab-body`}>
-
-          {config[activeTab].component} 
-
-        </div>
-      </div>
-    )
-  }
-
-
-  
-const About = () => {
-
-  const [isSm, setIsSm] = useState(false);
-  
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 640px)');
-    const handleChange = () => setIsSm(mediaQuery.matches);
-
-    mediaQuery.addListener(handleChange);
-    handleChange();
-
-    return () => mediaQuery.removeListener(handleChange);
-  }, []);
-  
-  return (
-    <>
-    <title>REFI | About </title>
-    <Navbar/>
-    
-    <div className="hero min-h-screen" style={{backgroundImage: 'url(https://images.ctfassets.net/970q4hu1vjn7/r2SLOJB49LmLai34iry10/193cbf2cac1ea30b3e1612f6d76f597b/corporate-vs-academic-research.webp?w=1600&fm=jpg&fl=progressive)'}}>
-  <div className="hero-overlay bg-opacity-60"></div>
-  <div className="hero-content text-center text-neutral-content">
-    <div className="max-w-md">
-    
-    <h1>
-<div className="flex flex-row gap-4">
-<span>About</span>
-    <span>Us</span>
-</div>
-    </h1>
-  
-
-
-      {/* <p className="mb-5">CHAMPIONING THOMASIAN EXCELLENCE AND INNOVATION. EMPOWER A THOMASIAN ADVOCACY.</p>
-      <button className="btn btn-primary text-lg font-semibold">Explore</button> */}
-    </div>
-  </div>
-</div>
-
-<section className="flex items-start justify-center">
-    <MyTabs/>
-  </section>
-
-
-
-<Footer/>
-
-    </>
-  )
+      </CustomTabPanel>
+    </Box>
+  );
 }
-
-export default About

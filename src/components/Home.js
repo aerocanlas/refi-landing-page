@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useEffect, useState  } from "react";
+import { Carousel } from 'flowbite-react';
+
 export default function Home() {
 
   const [isSm, setIsSm] = useState(false);
@@ -20,12 +22,43 @@ export default function Home() {
     <title>REFI | Home </title>
     <Navbar/>
     {/* Hero Image */}
-    <div className="hero min-h-screen" style={{backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)'}}>
-  <div className="hero-overlay bg-opacity-60"></div>
+    <div className="hero">
+  <div className="hero-overlay bg-opacity-60">
+  <div className="carousel w-screen h-full">
+  <div id="slide1" className="carousel-item relative w-full">
+    <img src="./images/slides/1.jpg" className="w-full object-cover object-center opacity-60" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide4" className="btn btn-circle">❮</a> 
+      <a href="#slide2" className="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide2" className="carousel-item relative w-full">
+  <img src="./images/slides/2.jpg" className="w-full object-cover object-center  opacity-60" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide1" className="btn btn-circle">❮</a> 
+      <a href="#slide3" className="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide3" className="carousel-item relative w-full">
+  <img src="./images/slides/3.jpg" className="w-full object-cover object-center  opacity-60" />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide2" className="btn btn-circle">❮</a> 
+      <a href="#slide4" className="btn btn-circle">❯</a>
+    </div>
+  </div> 
+  <div id="slide4" className="carousel-item relative w-full">
+  <img src="./images/slides/4.jpg" className="w-full object-cover object-center " />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide3" className="btn btn-circle">❮</a> 
+      <a href="#slide1" className="btn btn-circle">❯</a>
+    </div>
+  </div>
+</div>
+  </div>
   <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
-      <h1 className="mb-5 text-5xl font-medium tracking-widest">Give Now</h1>
-      <p className="mb-5">CHAMPIONING THOMASIAN EXCELLENCE AND INNOVATION. EMPOWER A THOMASIAN ADVOCACY.</p>
+      <h1 className="mb-5 text-5xl font-medium tracking-widest text-black ">Give Now</h1>
+      <p className="mb-5 text-black">CHAMPIONING THOMASIAN EXCELLENCE AND INNOVATION. EMPOWER A THOMASIAN ADVOCACY.</p>
       <button className="btn btn-primary text-lg font-semibold">Explore</button>
     </div>
   </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, } from 'react'
 import { FaHeart } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
-import ScreenSizeDependentText from './ScreenSizeDependentText';
+import ScreenSizeDependentText2 from './ScreenSizeDependentText2';
 
 const Navbar = () => {
 
@@ -102,11 +102,11 @@ const Navbar = () => {
 
         {scrolled ? 
       
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" stroke="black" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" stroke="white" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
 
       :
 
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" stroke="white" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" stroke="black" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
 
       }
       </div>
@@ -134,7 +134,7 @@ const Navbar = () => {
     </div>
     <div className='flex flex-row gap-6'>
     {hide ? null : <img id="logo-image" src="logo-refi.png" alt="Logo" width="100" height="100" />} 
-    <ScreenSizeDependentText text="Research & Endowment Foundation Incorporated"/> 
+    <ScreenSizeDependentText2 text="Research & Endowment Foundation Incorporated"/> 
     {/* <a className='sm:[10px] md:[25px] xl:text-xl font-bold'>Research & Endowment Foundation Incorporated</a> */}
     </div>    
     </div>
@@ -142,35 +142,35 @@ const Navbar = () => {
   <div className="navbar-end">
   <div className="navbar-center hidden lg:flex ">
     <ul className="menu menu-horizontal px-1 font-bold gap-6 mx-6">
-    <li className={`${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Home'>Home</NavLink></li>
+    <li className={`${scrolled ? 'text-gray-700' : 'text-black'}`}><NavLink to='/Home'>Home</NavLink></li>
       <li>
       <div className="dropdown dropdown-hover">
-          <div tabIndex={0} className={`${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/About'>About</NavLink></div>
+          <div tabIndex={0} className={`${scrolled ? 'text-gray-700' : 'text-black'}`}><NavLink to='/About'>About</NavLink></div>
             <div className='mt-4 -ml-[140px]'>
               <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow items-center rounded-box w-52 mt-2 bg-gray-600">
                 <li 
-                className={`${scrolled ? 'text-black' : 'text-gray-100'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}>
+                className={`${scrolled ? 'text-gray-700' : 'text-black'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}>
                   <NavLink to='/Directory'>Directory of Grants</NavLink></li>
               </ul>
           </div>
       </div>
       </li>
-      <li className={`${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Contact'>Contact</NavLink></li>
+      <li className={`${scrolled ? 'text-gray-700' : 'text-black'}`}><NavLink to='/Contact'>Contact</NavLink></li>
       <li>
       <div className="dropdown dropdown-hover">
-          <div tabIndex={0} className={`${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Programs'>Programs</NavLink></div>
+          <div tabIndex={0} className={`${scrolled ? 'text-gray-700' : 'text-black'}`}><NavLink to='/Programs'>Programs</NavLink></div>
             <div className='mt-4 -ml-[185px]'>
               <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow items-center rounded-box w-72 mt-2 bg-gray-600">
-                <li className={`${scrolled ? 'text-black' : 'text-gray-100'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Research Grant</a></li>
-                <li className={`${scrolled ? 'text-black' : 'text-gray-100'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Scholarship Grant</a></li>
-                <li className={`${scrolled ? 'text-black' : 'text-gray-100'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Thesis / Dissertation Grant</a></li>
-                <li className={`${scrolled ? 'text-black' : 'text-gray-100'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Travel / Study / Training Grant</a></li>
-                <li className={`${scrolled ? 'text-black' : 'text-gray-100'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Community Dev't / Outreach Grant</a></li>
+                <li className={`${scrolled ? 'text-black' : 'text-black'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Research Grant</a></li>
+                <li className={`${scrolled ? 'text-black' : 'text-black'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Scholarship Grant</a></li>
+                <li className={`${scrolled ? 'text-black' : 'text-black'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Thesis / Dissertation Grant</a></li>
+                <li className={`${scrolled ? 'text-black' : 'text-black'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Travel / Study / Training Grant</a></li>
+                <li className={`${scrolled ? 'text-black' : 'text-black'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Community Dev't / Outreach Grant</a></li>
               </ul>
           </div>
       </div>
       </li>
-      <li className={`${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Download'>Download</NavLink></li>
+      <li className={`${scrolled ? 'text-gray-700' : 'text-black'}`}><NavLink to='/Download'>Download</NavLink></li>
     </ul>
   </div>
   <NavLink to='/Donate'>

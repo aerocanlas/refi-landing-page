@@ -292,8 +292,6 @@ const About = () => {
     <MyTabs/>
   </section>
 
-
-
 <Footer/>
 
     </>

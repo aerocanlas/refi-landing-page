@@ -46,9 +46,16 @@ export default function BasicTabs() {
   };
 
   return (
-<Box sx={{ width: '100%', ml: '10%', mr: '10%', mt: '2%'}}>
+<Box sx={{ maxWidth: { xs: 420, sm: '100%' }, ml: '10%', mr: '10%', mt: '2%'}}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+      <Tabs
+  value={value}
+  onChange={handleChange}
+  variant="scrollable"
+  scrollButtons
+  allowScrollButtonsMobile
+  aria-label="scrollable force tabs example"
+>
           <Tab label="History" {...a11yProps(0)} sx={{fontWeight: 'bold', fontSize: '21px'}}/>
           <Tab label="Mission & Vision" {...a11yProps(1)} sx={{fontWeight: 'bold', fontSize: '21px'}}/>
           <Tab label="The Board of Directors" {...a11yProps(2)} sx={{fontWeight: 'bold', fontSize: '21px'}}/>
@@ -58,17 +65,22 @@ export default function BasicTabs() {
       <CustomTabPanel value={value} index={0}>
       <>
 
-      <dd className="my-10 text-xl text-gray-500 text-justify">The UST Research and Endowment Foundation, Inc. was established in 1991 to facilitate and manage the donations for the scholarship of both students and faculty of the University of Santo Tomas. Since then, it has received support from Thomasian alumni and industry partners. Over the years, maintaining its good standing with the Securities and Exchange Commission, the Bureau of Internal Revenue, and the Department of Social Welfare and Development has helped the Foundation in its efforts to aid students, faculty, and support staff of UST.
+      <div className='mx-6'>
+      <dd className="my-6 text-xl text-gray-500 text-justify">The UST Research and Endowment Foundation, Inc. was established in 1991 to facilitate and manage the donations for the scholarship of both students and faculty of the University of Santo Tomas. Since then, it has received support from Thomasian alumni and industry partners. Over the years, maintaining its good standing with the Securities and Exchange Commission, the Bureau of Internal Revenue, and the Department of Social Welfare and Development has helped the Foundation in its efforts to aid students, faculty, and support staff of UST.
 
  
 
 <br/>
 <br/>In 2017, the Foundation received its certification from the Philippine Council for NGO Certification, as well as the Donee Institution Status from the Bureau of Internal Revenue.</dd>
+
+      </div>
+
       </>
       </CustomTabPanel>
+
       <CustomTabPanel value={value} index={1}>
       <>
-
+      <div className='mx-8'>
         <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-1 md:gap-x-8 md:gap-y-10 my-10">
             <div className="relative">
                 <dt>
@@ -117,13 +129,14 @@ export default function BasicTabs() {
 
            
         </dl>
-
+        </div>
       </>
       </CustomTabPanel>
+
       <CustomTabPanel value={value} index={2}>
       <>
 
-    <div class="my-10 lg:gap-xl-12 grid gap-x-6 md:grid-cols-1 xl:grid-cols-4">
+    <div class="mx-10 my-10 lg:gap-xl-12 grid gap-x-6 md:grid-cols-1 xl:grid-cols-4">
       <div class="mb-12">
         <img src="./images/president.jpg"
           class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
@@ -206,21 +219,37 @@ export default function BasicTabs() {
 
       </>
       </CustomTabPanel>
+
       <CustomTabPanel value={value} index={3}>
       <>
-
+      <div className='mx-8'>
       <dd className="mt-2 ml-0 text-xl text-gray-500 text-justify">
       The beneficiaries and/or clients of the programs of the UST Research and Endowment Foundation, Inc. may include but not limited to the following:
                 </dd>
-      <ul>
-        <li>The Faculty Members of the University of Santo Tomas</li>
-        <li>Researchers of UST</li>
-        <li>Support Staff of UST</li>
-        <li>UST Faculties and Colleges</li>
-        <li>Poor but Deserving UST Students</li>
-        <li>Impoverished Partner/Adopted Communities of UST</li>
-      </ul>
 
+<div class='max-w-lg py-5'>
+    <ul class="flex flex-col gap-5 text-xl text-gray-500 pl-0">
+        <li class="border-b border-black rounded-sm">
+        The Faculty Members of the University of Santo Tomas
+        </li>
+        <li class="border-b border-black rounded-sm">
+        Researchers of UST
+        </li>
+        <li class="border-b border-black rounded-sm">
+        Support Staff of UST
+        </li>
+        <li class="border-b border-black rounded-sm">
+        UST Faculties and Colleges
+        </li>
+        <li class="border-b border-black rounded-sm">
+        Poor but Deserving UST Students
+        </li>
+        <li class="border-b border-black rounded-sm">
+        Impoverished Partner/Adopted Communities of UST
+        </li>
+    </ul>
+</div>
+</div>
       </>
       </CustomTabPanel>
     </Box>

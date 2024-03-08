@@ -32,7 +32,7 @@ const ScreenSizeDependentText = ({ text }) => {
     return () => mediaQuery.removeListener(handleChange);
   }, []);
 
-  return <div className={`xl:text-2xl w-[350px] font-bold ${scrolled ? 'text-black' : 'text-white'} ${isSm ? 'items-center' : null} ${isSm ? 'tracking-wider' : 'tracking-wide'} ${isSm ? 'mt-0' : 'mt-4'} ${isSm ? 'text-[22px]' : 'text-lg'}`}>{isSm ? text.replace('Research & Endowment Foundation Incorporated', 'REFI') : text}</div>;
+  return <div className={`xl:text-2xl w-[300px] font-bold ${scrolled ? 'text-black' : 'text-gray-900'} ${isSm ? 'items-center' : null} ${isSm ? 'tracking-wider' : 'tracking-wide'} ${isSm ? 'mt-0' : 'mt-4'} ${isSm ? 'text-[22px]' : 'text-xl'}`}>{isSm ? text.replace('Research & Endowment Foundation Incorporated', 'REFI') : text}</div>;
 };
 
 export default ScreenSizeDependentText;

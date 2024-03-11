@@ -101,7 +101,7 @@ export default function Home() {
           <div class="bg-white rounded-lg border p-4 sm:lg:h-[750px] lg:h-[550px]">
             <img src="./images/slides/8.jpg" alt="Lecture" class="w-full h-72 rounded-md object-cover" />
             <div class="px-1 py-2">
-              <div class="font-bold text-2xl mb-8">Professional Lecture</div>
+              <div class="font-bold text-2xl mb-8">Professorial Lecture</div>
               <p class="text-gray-700 text-base">
               Prof. Angeles Tan Alora, M.D., a former Dean and alumna of the University of Santo Tomas Faculty of Medicine and Surgery (FMS), was conferred the Doña Victoria Ty Tan Professorial Chair in a solemn investiture held at the Dr. George SK Ty Hall of the Bl. Buenaventura García Paredes, O.P. Building on November 14, 2023. The professorial chair is named after Doña Victoria Ty Tan, mother of Dr. George S.K. Ty, who founded Metrobank.              </p>
               </div>

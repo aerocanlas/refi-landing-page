@@ -69,13 +69,13 @@ export default function Home() {
   </div>
 </div>
   </div>
-  <div className="hero-content text-center text-neutral-content">
+  {/* <div className="hero-content text-center text-neutral-content">
     <div className="max-w-md">
       <h1 className="mb-5 text-5xl font-medium tracking-widest text-black ">Give Now</h1>
       <p className="mb-5 text-black">CHAMPIONING THOMASIAN EXCELLENCE AND INNOVATION. EMPOWER A THOMASIAN ADVOCACY.</p>
       <button className="btn btn-primary text-lg font-semibold">Explore</button>
     </div>
-  </div>
+  </div> */}
 </div>
 
 {/* Hero Text */}

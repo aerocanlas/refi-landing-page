@@ -134,7 +134,7 @@ const Navbar = () => {
     </div>
     <div className='flex flex-row gap-6'>
     {hide ? null : <img id="logo-image" src="logo-refi.png" alt="Logo" width="100" height="100" />} 
-    <ScreenSizeDependentText2 text="Research & Endowment Foundation Incorporated"/> 
+    <ScreenSizeDependentText2 text="UST RESEARCH AND ENDOWMENT FOUNDATION INC."/> 
     {/* <a className='sm:[10px] md:[25px] xl:text-xl font-bold'>Research & Endowment Foundation Incorporated</a> */}
     </div>    
     </div>

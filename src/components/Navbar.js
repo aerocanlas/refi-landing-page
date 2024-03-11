@@ -95,7 +95,7 @@ const Navbar = () => {
 //     </NavLink>  </div>
 // </div>
 
-<div className={`fixed navbar bg-base-100 py-6 z-10 ${isSm ? 'px-10' : 'px-14'} transition duration-500 ease-in-out ${scrolled ? 'bg-opacity-100' : 'bg-opacity-0'}`}>
+<div className={`text-lg fixed navbar bg-base-100 py-6 z-10 ${isSm ? 'px-10' : 'px-8'} transition duration-500 ease-in-out ${scrolled ? 'bg-opacity-100' : 'bg-opacity-0'}`}>
   <div className={`navbar-start`}>
     <div className={`dropdown ${scrolled ? 'color-black' : 'color-white'}`}>
       <div tabIndex={0} role="button" className={`btn btn-ghost lg:hidden`}>
@@ -111,7 +111,7 @@ const Navbar = () => {
       }
       </div>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-      <li><NavLink to='/Home'>Home</NavLink></li>
+      <li className='text-[22px]'><NavLink to='/Home'>Home</NavLink></li>
         <li>
         <NavLink to='/About'>About</NavLink>
           <ul className="p-2">
@@ -134,7 +134,7 @@ const Navbar = () => {
     </div>
     <div className='flex flex-row gap-6'>
     {hide ? null : <img id="logo-image" src="logo-refi.png" alt="Logo" width="100" height="100" />} 
-    <ScreenSizeDependentText text="UST Research & Endowment Foundation Inc."/> 
+    <ScreenSizeDependentText text="UST RESEARCH AND ENDOWMENT FOUNDATION INC."/> 
     {/* <a className='sm:[10px] md:[25px] xl:text-xl font-bold'>Research & Endowment Foundation Incorporated</a> */}
     </div>    
     </div>
@@ -142,10 +142,10 @@ const Navbar = () => {
   <div className="navbar-end">
   <div className="navbar-center hidden lg:flex ">
     <ul className="menu menu-horizontal px-1 font-bold gap-6 mx-6">
-    <li className={`${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Home'>Home</NavLink></li>
+    <li className={`text-[17px] ${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Home'>Home</NavLink></li>
       <li>
       <div className="dropdown dropdown-hover">
-          <div tabIndex={0} className={`${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/About'>About</NavLink></div>
+          <div tabIndex={0} className={` text-[17px] ${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/About'>About</NavLink></div>
             <div className='mt-4 -ml-[140px]'>
               <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow items-center rounded-box w-52 mt-2 bg-gray-600">
                 <li 
@@ -155,10 +155,10 @@ const Navbar = () => {
           </div>
       </div>
       </li>
-      <li className={`${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Contact'>Contact</NavLink></li>
+      <li className={`text-[17px] ${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Contact'>Contact</NavLink></li>
       <li>
       <div className="dropdown dropdown-hover">
-          <div tabIndex={0} className={`${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Programs'>Programs</NavLink></div>
+          <div tabIndex={0} className={`text-[17px] ${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Programs'>Programs</NavLink></div>
             <div className='mt-4 -ml-[185px]'>
               <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow items-center rounded-box w-72 mt-2 bg-gray-600">
                 <li className={`${scrolled ? 'text-black' : 'text-gray-100'} ${scrolled ? 'hover:text-white' : 'hover:text-gray-900'}`}><a>Research Grant</a></li>
@@ -170,11 +170,11 @@ const Navbar = () => {
           </div>
       </div>
       </li>
-      <li className={`${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Download'>Download</NavLink></li>
+      <li className={`text-[17px] ${scrolled ? 'text-black' : 'text-gray-100'}`}><NavLink to='/Download'>Download</NavLink></li>
     </ul>
   </div>
   <NavLink to='/Donate'>
-      <a className="btn bg-blue-700 text-white">  <FaHeart size={10}/> Donate Now </a>
+      <a className="flex text-[15px] btn bg-blue-700 text-white">  <FaHeart size={10}/> Donate </a>
   </NavLink> 
   </div>
 </div>

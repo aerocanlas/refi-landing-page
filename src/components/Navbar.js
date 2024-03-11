@@ -95,7 +95,7 @@ const Navbar = () => {
 //     </NavLink>  </div>
 // </div>
 
-<div className={`fixed navbar bg-base-100 py-6 z-10 ${isSm ? 'px-10' : 'px-40'} transition duration-500 ease-in-out ${scrolled ? 'bg-opacity-100' : 'bg-opacity-0'}`}>
+<div className={`fixed navbar bg-base-100 py-6 z-10 ${isSm ? 'px-10' : 'px-14'} transition duration-500 ease-in-out ${scrolled ? 'bg-opacity-100' : 'bg-opacity-0'}`}>
   <div className={`navbar-start`}>
     <div className={`dropdown ${scrolled ? 'color-black' : 'color-white'}`}>
       <div tabIndex={0} role="button" className={`btn btn-ghost lg:hidden`}>
@@ -134,7 +134,7 @@ const Navbar = () => {
     </div>
     <div className='flex flex-row gap-6'>
     {hide ? null : <img id="logo-image" src="logo-refi.png" alt="Logo" width="100" height="100" />} 
-    <ScreenSizeDependentText text="Research & Endowment Foundation Incorporated"/> 
+    <ScreenSizeDependentText text="UST Research & Endowment Foundation Inc."/> 
     {/* <a className='sm:[10px] md:[25px] xl:text-xl font-bold'>Research & Endowment Foundation Incorporated</a> */}
     </div>    
     </div>

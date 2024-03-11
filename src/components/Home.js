@@ -88,7 +88,7 @@ export default function Home() {
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 gap-20">
          
           <div class="bg-white rounded-lg border p-4 sm:lg:h-[750px] lg:h-[550px]">
-            <img src="/news 1.png" alt="Groundbreaking Ceremonies" class="w-full h-72 rounded-md object-cover" />
+            <img src="./images/slides/7.jpg" alt="Groundbreaking Ceremonies" class="w-full h-72 rounded-md object-cover" />
             <div class="px-1 py-4">
               <div class="font-bold text-2xl mb-10">Groundbreaking Ceremonies</div>
               <p class="text-gray-700 text-base">
@@ -100,7 +100,7 @@ export default function Home() {
             </div>
           </div>
           <div class="bg-white rounded-lg border p-4 sm:lg:h-[750px] lg:h-[550px]">
-            <img src="/news 2.png" alt="Lecture" class="w-full h-72 rounded-md object-cover" />
+            <img src="./images/slides/8.jpg" alt="Lecture" class="w-full h-72 rounded-md object-cover" />
             <div class="px-1 py-4">
               <div class="font-bold text-2xl mb-10">Professional Lecture</div>
               <p class="text-gray-700 text-base">

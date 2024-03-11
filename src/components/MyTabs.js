@@ -140,68 +140,58 @@ export default function BasicTabs() {
       <div class="mb-12">
         <img src="./images/president.jpg"
           class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
-        <p class="mb-2 font-bold">VERY. REV. FR. RICHARD G. ANG, OP</p>
-        <p class="text-neutral-500 dark:text-neutral-300">President and Chairman of the Board</p>
+        <p class="mb-2 font-bold text-center">VERY. REV. FR. RICHARD G. ANG, OP</p>
+        <p class="text-neutral-500 dark:text-neutral-300 text-center">President and Chairman of the Board</p>
       </div>
 
       <div class="mb-12">
         <img src="./images/vp.jpg"
           class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
-
-        <p class="mb-2 font-bold">REV. FR. ISAIAS D. TIONGCO, OP</p>
-        <p class="text-neutral-500 dark:text-neutral-300">Vice President</p>
+        <p class="mb-2 font-bold text-center">REV. FR. ISAIAS D. TIONGCO, OP</p>
+        <p class="text-neutral-500 dark:text-neutral-300 text-center">Vice President</p>
       </div>
 
       <div class="mb-12">
         <img src="./images/treasurer.jpg"
           class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
-        <p class="mb-2 font-bold">REV. FR. ROBERTO L. LUANZON, JR., OP</p>
-        <p class="text-neutral-500 dark:text-neutral-300">
+        <p class="mb-2 font-bold text-center">REV. FR. ROBERTO L. LUANZON, JR., OP</p>
+        <p class="text-neutral-500 dark:text-neutral-300 text-center">
         Treasurer
         </p>
       </div>
       <div class="mb-12">
         <img src="./images/corporate secretary.jpg"
           class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
-        <p class="mb-2 font-bold">REV. FR. LOUIE R. CORONEL, OP</p>
-        <p class="text-neutral-500 dark:text-neutral-300">Corporate Secretary</p>
-      </div>
-
-      <div class="mb-12">
-        <img src="./images/director.jpg"
-          class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
-        <p class="mb-2 font-bold">REV. FR. MAXIMO P. GATELA, OP</p>
-        <p class="text-neutral-500 dark:text-neutral-300">
-          Director
-        </p>
+        <p class="mb-2 font-bold text-center">REV. FR. LOUIE R. CORONEL, OP</p>
+        <p class="text-neutral-500 dark:text-neutral-300 text-center">Corporate Secretary</p>
       </div>
 
       <div class="mb-12">
         <img src="./images/member 1.jpg"
           class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
-        <p class="mb-2 font-bold">REV. FR. RODEL E. ALIGAN, OP</p>
-        <p class="text-neutral-500 dark:text-neutral-300">Member</p>
+        <p class="mb-2 font-bold text-center">REV. FR. RODEL E. ALIGAN, OP</p>
+        <p class="text-neutral-500 dark:text-neutral-300 text-center">Member</p>
       </div>
 
       <div class="mb-12">
         <img src="./images/member 2.jpg"
           class={`mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20`} width={200} alt=""  />
-        <p class="mb-2 font-bold">REV. FR. RODEL S. CANSANCIO, OP</p>
-        <p class="text-neutral-500 dark:text-neutral-300">Member</p>
+        <p class="mb-2 font-bold text-center">REV. FR. RODEL S. CANSANCIO, OP</p>
+        <p class="text-neutral-500 dark:text-neutral-300 text-center">Member</p>
       </div>
 
       <div class="mb-12">
         <img src="./images/member 3.jpg"
           class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
-        <p class="mb-2 font-bold">PROF. CHERYL R. PERALTA</p>
-        <p class="text-neutral-500 dark:text-neutral-300">Member</p>
+        <p class="mb-2 font-bold text-center">PROF. CHERYL R. PERALTA</p>
+        <p class="text-neutral-500 dark:text-neutral-300 text-center">Member</p>
       </div>
 
       <div class="mb-12">
-        <img src="./images/member 4.jpg"
+        <img src="./images/member 6.jpg"
           class={`mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20`} width={200} alt=""  />
-        <p class="mb-2 font-bold">PROF. MARIBEL G. NONATO</p>
-        <p class="text-neutral-500 dark:text-neutral-300">
+        <p class="mb-2 font-bold text-center">REV. FR. JANNEL N. ABOGADO, O.P.</p>
+        <p class="text-neutral-500 dark:text-neutral-300 text-center">
         Member
         </p>
       </div>
@@ -209,8 +199,8 @@ export default function BasicTabs() {
       <div class="mb-12">
         <img src="./images/member 5.jpg"
           class="mx-auto mb-4 rounded-full shadow-lg dark:shadow-black/20" width={200} alt=""  />
-        <p class="mb-2 font-bold">MRS. CLOTILDE N. ARCANGEL</p>
-        <p class="text-neutral-500 dark:text-neutral-300">
+        <p class="mb-2 font-bold text-center">MRS. CLOTILDE N. ARCANGEL</p>
+        <p class="text-neutral-500 dark:text-neutral-300 text-center">
         Member
         </p>
       </div>

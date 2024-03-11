@@ -23,8 +23,8 @@ export default function Home() {
     <Navbar/>
     {/* Hero Image */}
     <div className="hero">
-  <div className="hero-overlay bg-opacity-60">
-  <div className="carousel w-screen h-full">
+  <div className="-mt-1.5 hero-overlay bg-opacity-60">
+  <div className="carousel w-screen xl:h-screen">
   <div id="slide1" className="carousel-item relative w-full">
     <img src="./images/slides/1.jpg" className="w-full object-cover object-center opacity-60" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -80,7 +80,7 @@ export default function Home() {
 
 {/* Hero Text */}
 
-<div className={`hero  bg-base-200 ${isSm ? 'min-h-60' : 'min-h-96'}`}>
+<div className={`hero bg-base-200 ${isSm ? 'min-h-60' : 'min-h-96'}`}>
   <div className="hero-content text-center">
     <div className="max-w-[1000px] mx-10">
       <h1 className={`font-bold ${isSm ? 'text-2xl' : 'text-5xl'}`}>

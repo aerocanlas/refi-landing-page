@@ -87,25 +87,25 @@ export default function Home() {
       <div class="container mx-auto my-auto p-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 gap-20">
          
-          <div class="bg-white rounded-lg border p-4 sm:lg:h-[750px] lg:h-[550px]">
+          <div class="bg-white rounded-lg border p-4">
             <img src="./images/slides/7.jpg" alt="Groundbreaking Ceremonies" class="w-full h-72 rounded-md object-cover" />
             <div class="px-1 py-4">
-              <div class="font-bold text-2xl mb-8">Groundbreaking Ceremonies</div>
+              <div class="font-bold text-2xl mb-10">Groundbreaking Ceremonies</div>
               <p class="text-gray-700 text-base">
               On January 26, 2024, the University of Santo Tomas held the groundbreaking rites of the UST Santa Rosa – Dr. William T. Belo Interdisciplinary Research Institute (UST-WitBIRIn), adding the second edifice to the research and innovation-focused extension campus.              </p>
             </div>
-            <div class="px-1 py-2">
+            <div class="px-1 py-4">
               <a href="#" class="text-blue-500 hover:underline"><br/>Read More</a>
             </div>
           </div>
-          <div class="bg-white rounded-lg border p-4 sm:lg:h-[750px] lg:h-[550px]">
+          <div class="bg-white rounded-lg border p-4">
             <img src="./images/slides/8.jpg" alt="Lecture" class="w-full h-72 rounded-md object-cover" />
-            <div class="px-1 py-2">
-              <div class="font-bold text-2xl mb-8">Professorial Lecture</div>
+            <div class="px-1 py-4">
+              <div class="font-bold text-2xl mb-10">Professorial Lecture</div>
               <p class="text-gray-700 text-base">
               Prof. Angeles Tan Alora, M.D., a former Dean and alumna of the University of Santo Tomas Faculty of Medicine and Surgery (FMS), was conferred the Doña Victoria Ty Tan Professorial Chair in a solemn investiture held at the Dr. George SK Ty Hall of the Bl. Buenaventura García Paredes, O.P. Building on November 14, 2023. The professorial chair is named after Doña Victoria Ty Tan, mother of Dr. George S.K. Ty, who founded Metrobank.              </p>
               </div>
-            <div class="px-1 py-1">
+            <div class="px-1 py-4">
               <a href="#" class="text-blue-500 hover:underline">Read More</a>
             </div>
           </div>

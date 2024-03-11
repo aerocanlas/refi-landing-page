@@ -57,6 +57,13 @@ export default function Home() {
   <img src="./images/slides/5.jpg" className="w-full object-cover object-center opacity-60 " />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide4" className="btn btn-circle">❮</a> 
+      <a href="#slide6" className="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide6" className="carousel-item relative w-full">
+  <img src="./images/slides/9.jpg" className="w-full object-cover object-center opacity-80 " />
+    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+      <a href="#slide5" className="btn btn-circle">❮</a> 
       <a href="#slide1" className="btn btn-circle">❯</a>
     </div>
   </div>
@@ -87,7 +94,7 @@ export default function Home() {
       <div class="container mx-auto my-auto p-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 gap-20">
          
-          <div class="bg-white rounded-lg border p-4">
+          <div class="bg-white rounded-lg border p-4 ">
             <img src="./images/slides/7.jpg" alt="Groundbreaking Ceremonies" class="w-full h-72 rounded-md object-cover" />
             <div class="px-1 py-4">
               <div class="font-bold text-2xl mb-10">Groundbreaking Ceremonies</div>
@@ -98,7 +105,7 @@ export default function Home() {
               <a href="#" class="text-blue-500 hover:underline"><br/>Read More</a>
             </div>
           </div>
-          <div class="bg-white rounded-lg border p-4">
+          <div class="bg-white rounded-lg border p-4 ">
             <img src="./images/slides/8.jpg" alt="Lecture" class="w-full h-72 rounded-md object-cover" />
             <div class="px-1 py-4">
               <div class="font-bold text-2xl mb-10">Professorial Lecture</div>

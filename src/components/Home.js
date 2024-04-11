@@ -89,7 +89,7 @@ export default function Home() {
     </div>
   </div>
 </div>
-
+-
 <div class="bg-gradient-to-blue from-blue-50 to-gray-50 flex items-center justify-center lg:h-[800px]">
       <div class="container mx-auto my-auto p-10">
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-2 gap-20">
@@ -102,7 +102,7 @@ export default function Home() {
               On January 26, 2024, the University of Santo Tomas held the groundbreaking rites of the UST Santa Rosa – Dr. William T. Belo Interdisciplinary Research Institute (UST-WitBIRIn), adding the second edifice to the research and innovation-focused extension campus.              </p>
             </div>
             <div class="px-1 py-4">
-              <a href="#" class="text-blue-500 hover:underline"><br/>Read More</a>
+              <a href="/News1" class="text-blue-500 hover:underline"><br/>Read More</a>
             </div>
           </div>
           <div class="bg-white rounded-lg border p-4 ">
@@ -113,7 +113,7 @@ export default function Home() {
               Prof. Angeles Tan Alora, M.D., a former Dean and alumna of the University of Santo Tomas Faculty of Medicine and Surgery (FMS), was conferred the Doña Victoria Ty Tan Professorial Chair in a solemn investiture held at the Dr. George SK Ty Hall of the Bl. Buenaventura García Paredes, O.P. Building on November 14, 2023. The professorial chair is named after Doña Victoria Ty Tan, mother of Dr. George S.K. Ty, who founded Metrobank.              </p>
               </div>
             <div class="px-1 py-4">
-              <a href="#" class="text-blue-500 hover:underline">Read More</a>
+              <a href="/News2" class="text-blue-500 hover:underline">Read More</a>
             </div>
           </div>
 
